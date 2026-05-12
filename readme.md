@@ -23,6 +23,9 @@ In sintesi: **Flask ospita e persiste (in sessione) alcuni dati**; **il motore d
 
 ### Setup personalizzabile (squadre, budget, regole)
 
+<img width="893" height="766" alt="Screenshot 2026-05-12 alle 13 30 04" src="https://github.com/user-attachments/assets/48e7ddaa-22b3-41ce-9f7e-d47618586743" />
+
+
 Dalla schermata iniziale (`templates/index.html`) si configurano:
 
 - **Timer principale** dell’asta (secondi) e **soglia minima al rilancio**: se, al momento di un nuovo rilancio, il tempo residuo è inferiore alla soglia, il timer viene riportato al valore configurato (fino al massimo del timer principale).
@@ -44,9 +47,14 @@ Opzioni aggiuntive: **Modalità sviluppo** (shortcut per test rapidi) e **Carica
 
 ### Dual-view: Console regia vs TV Mode
 
-- **Console**: una volta avviata l’asta, l’interfaccia principale riunisce ricerca e avvio asta su un giocatore, pannello asta attiva (timer, offerta corrente), e bacheche squadre con budget e roster.  
+
+
+
+- **Console**: una volta avviata l’asta, l’interfaccia principale riunisce ricerca e avvio asta su un giocatore, pannello asta attiva (timer, offerta corrente), e bacheche squadre con budget e roster.
+  <img width="892" height="760" alt="Screenshot 2026-05-12 alle 13 31 33" src="https://github.com/user-attachments/assets/6af0faee-9264-4070-ba2f-ab88597e89c0" />
+
 - **TV Mode (finestra dedicata)**: dalla console, **TV Mode (1080p / 4K)** apre `static/tv_auction.html` in una nuova finestra. Ogni ~**300 ms** la pagina madre invia tramite `postMessage` l’HTML clonato delle sezioni asta attiva e delle bacheche squadre; la pagina TV **estrae testi e struttura dal DOM** e ridisegna layout ottimizzato per la visione da lontano (scala automatica da tela 3840×2160).  
-- Nel template è presente anche un layout **fullscreen** per proiezione sulla stessa pagina (`#tv-mode-layout`); lo script che lo attiva cerca un pulsante `toggle-tv-mode` (oggi **non** incluso nel markup) — il flusso operativo documentato e cablato nell’UI è la **finestra TV separata**.
+<img width="1705" height="957" alt="Screenshot 2026-05-12 alle 13 32 38" src="https://github.com/user-attachments/assets/10121ecb-450d-4f4a-a824-116e41d59c45" />
 
 La “sincronizzazione” è quindi **polling lato client tra finestra madre e popup**, non un canale server push multi-dispositivo.
 
