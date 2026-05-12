@@ -154,14 +154,16 @@ FantaLeagueDraft_Clean/
 
 # HARDWARE: Pulsanti di rilancio fisici.
 
-## Guida rapida all’uso
-
 Per rendere l'asta un'esperienza davvero immersiva e "televisiva", è stato sviluppato un sistema di pulsantiere fisiche personalizzate. Questo permette ai partecipanti di rilanciare premendo un vero bottone.
+
+<img width="3180" height="1492" alt="2" src="https://github.com/user-attachments/assets/a3e7b37e-e5de-456a-bce4-1c63ef49a419" />
 
 ## Caratteristiche principali:
 - Componentistica: Il sistema utilizza comuni Arcade Button (pulsanti da sala giochi), scelti per la loro resistenza e il feedback tattile immediato.
 - Connettività: Ogni pulsantiera è dotata di un connettore USB Type-C. Questo permette di collegarle e scollegarle facilmente utilizzando cavi standard, facilitando il setup e il trasporto.
 - Cervello del sistema: Il cuore del dispositivo è un Arduino Nano (o compatibile). La particolarità di questa scelta è che l'Arduino viene programmato per essere riconosciuto dal PC come una tastiera standard (HID).
+
+<img width="3728" height="1408" alt="1" src="https://github.com/user-attachments/assets/c52553d2-1f11-41ef-8017-eb442a130717" />
 
 ## Perché questa soluzione:
 - Plug & Play: Non sono necessari driver, software aggiuntivi o configurazioni complicate. Una volta collegato, il computer "vede" una tastiera e i tasti inviano semplicemente delle combinazioni di tasti.
